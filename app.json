@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "AwesomeProject",
-    "slug": "AwesomeProject",
+    "slug": "awesumproject",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fcd915ed-7936-4735-b672-32be16cf98e5"
+      }
+    },
+    "owner": "sajib_hosen"
   }
 }
