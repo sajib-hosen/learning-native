@@ -1,23 +1,28 @@
-// import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import Home from './components/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { SafeAreaView } from 'react-native';
 import { TailwindProvider } from 'tailwindcss-react-native';
+import Login from './src/components/Login';
+import HomeScreen from './src/screens/HomeScreen';
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
 
+
   return (
     <TailwindProvider>
-      <View style={{border: '1px solid blue'}}  >
-        <Text className="flex-1 items-center justify-center bg-white text-blue-500 font-black " >APP</Text>
-        <Home/>
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+
+          <Stack.Screen name="Home" component={HomeScreen} />
+
+        </Stack.Navigator>
+      </NavigationContainer>
     </TailwindProvider>
   );
 }
 
-// basic components 
-{/* <View></View> */}
-{/* <Text></Text> */}
-{/* <Image></Image> */}
-{/* <ScrollView></ScrollView> */}
-{/* <TextInput></TextInput> */}
+
+// https://www.youtube.com/watch?v=JqPezeQiwxk&t=715s
