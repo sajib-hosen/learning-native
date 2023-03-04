@@ -4,6 +4,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import Login from './src/components/Login';
+import Discover from './src/screens/Discover';
 import HomeScreen from './src/screens/HomeScreen';
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Navigator>
 
           <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Discover" component={Discover} />
 
         </Stack.Navigator>
       </NavigationContainer>
